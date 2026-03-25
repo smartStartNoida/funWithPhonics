@@ -168,15 +168,90 @@
 	// Use SpeechSynthesis when available; fallback to a tiny beep using WebAudio.
 	const canSpeak = "speechSynthesis" in window && "SpeechSynthesisUtterance" in window;
 	let audioCtx = null;
+	let preferredVoice = null;
+
+	const getVoicesSafe = () => {
+		try {
+			return window.speechSynthesis.getVoices?.() || [];
+		} catch {
+			return [];
+		}
+	};
+
+	const pickPreferredFemaleVoice = (voices) => {
+		if (!Array.isArray(voices) || voices.length === 0) return null;
+
+		// Heuristics: different browsers/OS name female voices differently.
+		// Prefer common Windows/Edge/Chrome female voices first.
+		const preferredNameHints = [
+			"zira",
+			"sonia",
+			"jenny",
+			"natasha",
+			"aria",
+			"susan",
+			"hazel",
+			"female",
+		];
+
+		const scoreVoice = (v) => {
+			const name = String(v?.name || "").toLowerCase();
+			const lang = String(v?.lang || "").toLowerCase();
+
+			let score = 0;
+			// English voices first (content is English words).
+			if (lang.startsWith("en-")) score += 20;
+			if (lang === "en-in") score += 6; // nice on Indian devices if available
+
+			// Prefer local installed voices.
+			if (v?.localService) score += 8;
+
+			// Prefer "female" hints in the voice name.
+			for (let i = 0; i < preferredNameHints.length; i++) {
+				if (name.includes(preferredNameHints[i])) score += 40 - i;
+			}
+
+			return score;
+		};
+
+		let best = voices[0];
+		let bestScore = scoreVoice(best);
+		for (const v of voices) {
+			const s = scoreVoice(v);
+			if (s > bestScore) {
+				best = v;
+				bestScore = s;
+			}
+		}
+		return best || null;
+	};
+
+	const refreshPreferredVoice = () => {
+		if (!canSpeak) return;
+		const voices = getVoicesSafe();
+		const picked = pickPreferredFemaleVoice(voices);
+		preferredVoice = picked || null;
+	};
+
+	if (canSpeak) {
+		// Some browsers load voices async; this event fires when ready.
+		window.speechSynthesis.addEventListener?.("voiceschanged", refreshPreferredVoice);
+		refreshPreferredVoice();
+	}
 
 	const speak = (text) => {
 		if (canSpeak) {
 			// Cancel any in-flight speech so repeated clicks feel responsive.
 			window.speechSynthesis.cancel();
 			const u = new SpeechSynthesisUtterance(text);
-			u.rate = 0.95; // kid-friendly pace
-			u.pitch = 1.05;
-			u.volume = 1;
+			// Try to force a female voice when available.
+			if (!preferredVoice) refreshPreferredVoice();
+			if (preferredVoice) u.voice = preferredVoice;
+			u.lang = preferredVoice?.lang || "en-US";
+			// Softer + kid-friendly delivery.
+			u.rate = 0.9;
+			u.pitch = 1.15;
+			u.volume = 0.78;
 			window.speechSynthesis.speak(u);
 			return;
 		}
