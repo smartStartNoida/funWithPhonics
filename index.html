@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description"
+		content="S-M-A-R-T Start Readers — fun rhyming words, phonics, and early reading skills for kids." />
+	<title>S-M-A-R-T Start Readers | Kids Coaching Institute</title>
+
+	<!-- Google Font (kid-friendly + modern) -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+	<link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+	<!-- Skip link for accessibility -->
+	<a class="skip-link" href="#main">Skip to content</a>
+
+	<!-- Sticky Navbar -->
+	<header class="site-header" id="top">
+		<nav class="nav container" aria-label="Primary">
+			<a class="brand" href="#top" aria-label="S-M-A-R-T Start Readers home">
+				<span class="brand__logo" aria-hidden="true">S</span>
+				<span class="brand__text">
+					<strong>S-M-A-R-T</strong> Start Readers
+					<span class="brand__tagline">Smart Start: Where sounds turn into stories</span>
+				</span>
+			</a>
+
+			<button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false">
+				<span class="nav__toggle-bars" aria-hidden="true"></span>
+			</button>
+
+			<ul class="nav__links" data-nav-links>
+				<!-- Smooth-scrolling anchors -->
+				<li><a href="#about">About</a></li>
+				<li><a href="#features">Features</a></li>
+          <li><a href="#programs">Programs</a></li>
+				<li><a href="#demo">Demo</a></li>
+				<li><a href="#gallery">Activities</a></li>
+				<li><a href="#testimonials">Parents</a></li>
+				<li><a class="btn btn--small" href="#contact">Start Learning</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main id="main">
+		<!-- HERO -->
+		<section class="hero" aria-label="Hero">
+			<!-- Animated background letters injected by JS into this layer -->
+			<div class="hero__letters" aria-hidden="true" data-letters-layer></div>
+
+			<div class="container hero__content">
+				<div class="hero__copy reveal">
+					<p class="pill">
+						<span class="pill__dot" aria-hidden="true"></span>
+						Kids Coaching Institute • Rhyming • Phonics • Early Reading
+					</p>
+					<h1>
+						Welcome to
+						<span class="highlight">S-M-A-R-T Start Readers</span>
+					</h1>
+					<p class="subhead">
+						<strong>Smart Start: Where sounds turn into stories</strong>
+						<br />
+						Fun, engaging lessons that build confidence in reading—step by step.
+					</p>
+					<div class="hero__cta">
+						<a class="btn" href="#contact">Start Learning Today</a>
+						<a class="btn btn--ghost" href="#demo">Try a Quick Demo</a>
+					</div>
+
+					<div class="hero__badges">
+						<!-- Simple icon cards (inline SVG so you don't need image assets) -->
+						<div class="mini-card">
+							<span class="mini-card__icon" aria-hidden="true">
+								<!-- book icon -->
+								<svg viewBox="0 0 24 24" role="img" focusable="false">
+									<path
+										d="M5 4.5C5 3.12 6.12 2 7.5 2H20v18.5a1.5 1.5 0 0 1-1.5 1.5H7.5A2.5 2.5 0 0 1 5 19.5V4.5Z"
+										fill="currentColor" opacity=".25" />
+									<path
+										d="M5 19.5A2.5 2.5 0 0 0 7.5 22H19a1 1 0 0 0 1-1V4H7.5A1.5 1.5 0 0 0 6 5.5V19.2c.4.2.9.3 1.5.3H18"
+										fill="currentColor" />
+								</svg>
+							</span>
+							<span class="mini-card__text">
+								<strong>Reading Ready</strong>
+								<small>From sounds to stories</small>
+							</span>
+						</div>
+
+						<div class="mini-card">
+							<span class="mini-card__icon" aria-hidden="true">
+								<!-- sound icon -->
+								<svg viewBox="0 0 24 24" role="img" focusable="false">
+									<path d="M4 10v4a2 2 0 0 0 2 2h2l5 4V4L8 8H6a2 2 0 0 0-2 2Z" fill="currentColor" />
+									<path
+										d="M16 8.5a1 1 0 0 1 1.4-.2A7 7 0 0 1 20 14a7 7 0 0 1-2.6 5.7 1 1 0 0 1-1.2-1.6A5 5 0 0 0 18 14a5 5 0 0 0-1.8-4 1 1 0 0 1-.2-1.5Z"
+										fill="currentColor" opacity=".55" />
+								</svg>
+							</span>
+							<span class="mini-card__text">
+								<strong>Phonics Fun</strong>
+								<small>Clear sound training</small>
+							</span>
+						</div>
+
+						<div class="mini-card">
+							<span class="mini-card__icon" aria-hidden="true">
+								<!-- star icon -->
+								<svg viewBox="0 0 24 24" role="img" focusable="false">
+									<path
+										d="M12 2l2.8 6.3 6.9.6-5.2 4.4 1.6 6.7L12 16.9 5.9 20l1.6-6.7L2.3 8.9l6.9-.6L12 2Z"
+										fill="currentColor" />
+								</svg>
+							</span>
+							<span class="mini-card__text">
+								<strong>Small Batches</strong>
+								<small>Personal attention</small>
+							</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="hero__art reveal">
+					<!-- Kid-friendly illustration placeholder (pure SVG) -->
+					<div class="art-card">
+						<svg class="art" viewBox="0 0 520 420" role="img" aria-label="Kids learning illustration">
+							<defs>
+								<linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+									<stop offset="0" stop-color="#90E0EF" stop-opacity=".9" />
+									<stop offset=".5" stop-color="#FFB703" stop-opacity=".65" />
+									<stop offset="1" stop-color="#6C63FF" stop-opacity=".75" />
+								</linearGradient>
+								<filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+									<feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000"
+										flood-opacity=".18" />
+								</filter>
+							</defs>
+
+							<!-- soft blob background -->
+							<path
+								d="M78,116 C120,28 248,10 318,42 C388,74 490,140 454,236 C418,332 320,414 214,384 C108,354 36,204 78,116 Z"
+								fill="url(#g1)" filter="url(#shadow)" />
+
+							<!-- book -->
+							<g transform="translate(140 150)">
+								<rect x="0" y="30" rx="18" ry="18" width="250" height="170" fill="#ffffff"
+									opacity=".9" />
+								<rect x="0" y="30" rx="18" ry="18" width="120" height="170" fill="#ffffff"
+									opacity=".8" />
+								<rect x="120" y="30" rx="18" ry="18" width="130" height="170" fill="#ffffff"
+									opacity=".75" />
+								<path d="M120 30v170" stroke="#6C63FF" stroke-width="5" opacity=".25" />
+								<circle cx="55" cy="95" r="16" fill="#FFB703" opacity=".95" />
+								<circle cx="190" cy="105" r="14" fill="#90E0EF" opacity=".95" />
+								<path d="M30 145h70" stroke="#6C63FF" stroke-width="8" opacity=".35"
+									stroke-linecap="round" />
+								<path d="M160 150h70" stroke="#6C63FF" stroke-width="8" opacity=".25"
+									stroke-linecap="round" />
+							</g>
+
+							<!-- floating letters -->
+							<g font-family="Nunito, sans-serif" font-weight="800" fill="#ffffff" opacity=".92">
+								<text x="78" y="145" font-size="42">A</text>
+								<text x="430" y="145" font-size="42">B</text>
+								<text x="405" y="305" font-size="48">C</text>
+								<text x="98" y="318" font-size="52">D</text>
+							</g>
+						</svg>
+
+						<div class="art-card__note">
+							<strong>Fun + Focused</strong>
+							<span>Playful practice kids love, structure parents trust.</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ABOUT -->
+		<section class="section" id="about" aria-label="About">
+			<div class="container">
+				<div class="section__head reveal">
+					<h2>How we teach</h2>
+					<p>
+						We blend <strong>rhyming words</strong>, <strong>phonics sounds</strong>, and
+						<strong>early reading</strong> into short, joyful activities—so kids learn faster and
+						remember longer.
+					</p>
+				</div>
+
+				<div class="cards cards--3">
+					<article class="card reveal">
+						<div class="card__icon" aria-hidden="true">🎵</div>
+						<h3>Rhythm & rhymes</h3>
+						<p>Kids practice patterns like <strong>cat–bat–hat</strong> to build word families.</p>
+					</article>
+					<article class="card reveal">
+						<div class="card__icon" aria-hidden="true">🔤</div>
+						<h3>Sounds → blending</h3>
+						<p>We teach letter sounds, then blend them into simple words and sentences.</p>
+					</article>
+					<article class="card reveal">
+						<div class="card__icon" aria-hidden="true">🧩</div>
+						<h3>Learn by doing</h3>
+						<p>Games, worksheets, and mini challenges keep learning active and fun.</p>
+					</article>
+				</div>
+
+				<!-- Owner / Tutor information (adds trust for parents) -->
+				<article class="card reveal tutor-card" aria-label="Meet the tutor">
+					<div class="tutor-card__avatar" aria-hidden="true">MG</div>
+					<div class="tutor-card__body">
+						<h3 class="tutor-card__title">Meet the Tutor</h3>
+						<p class="tutor-card__name"><strong>Monika Gupta</strong> • Founder & Lead Tutor</p>
+						<p class="tutor-card__text">
+							Kids learn best with warmth + structure. Monika ma’am focuses on clear phonics,
+							fun rhyming patterns, and confidence-building practice.
+						</p>
+					</div>
+				</article>
+			</div>
+		</section>
+
+		<!-- FEATURES -->
+		<section class="section section--tint" id="features" aria-label="Features">
+			<div class="container">
+				<div class="section__head reveal">
+					<h2>What your child gets</h2>
+					<p>Colorful, structured lessons designed for confident early readers.</p>
+				</div>
+
+				<div class="feature-grid">
+					<article class="feature reveal">
+						<div class="feature__top">
+							<span class="feature__emoji" aria-hidden="true">🐱</span>
+							<h3>Rhyming Words Practice</h3>
+						</div>
+						<p>Build word families quickly with fun, repeatable rhyme patterns.</p>
+					</article>
+					<article class="feature reveal">
+						<div class="feature__top">
+							<span class="feature__emoji" aria-hidden="true">🔊</span>
+							<h3>Phonics Sounds Training</h3>
+						</div>
+						<p>Clear sound practice for letters and blends—perfect for early readers.</p>
+					</article>
+					<article class="feature reveal">
+						<div class="feature__top">
+							<span class="feature__emoji" aria-hidden="true">🎮</span>
+							<h3>Interactive Learning</h3>
+						</div>
+						<p>Games, flashcards, and quick quizzes that keep kids engaged.</p>
+					</article>
+					<article class="feature reveal">
+						<div class="feature__top">
+							<span class="feature__emoji" aria-hidden="true">👩‍🏫</span>
+							<h3>Small Batch Classes</h3>
+						</div>
+						<p>Personal attention, progress tracking, and consistent improvement.</p>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<!-- DEMO -->
+		<section class="section" id="demo" aria-label="Demo learning">
+			<div class="container">
+				<div class="section__head reveal">
+					<h2>Try a quick rhyming demo</h2>
+					<p>
+						Tap a word to practice. Then press <strong>Play Sound</strong> to hear it.
+						<span class="muted">(Uses your device’s built-in voice.)</span>
+					</p>
+				</div>
+
+				<div class="demo reveal">
+					<div class="demo__words" role="group" aria-label="Rhyming words">
+						<!-- Buttons make it easy for keyboard/touch users -->
+						<button class="chip is-active" type="button" data-word="Cat">Cat</button>
+						<button class="chip" type="button" data-word="Bat">Bat</button>
+						<button class="chip" type="button" data-word="Hat">Hat</button>
+						<button class="chip" type="button" data-word="Mat">Mat</button>
+					</div>
+
+					<div class="demo__panel">
+						<div class="demo__big">
+							<span class="demo__label">Selected word</span>
+							<span class="demo__value" data-selected-word>Cat</span>
+						</div>
+
+						<div class="demo__actions">
+							<button class="btn" type="button" data-play-sound>Play Sound</button>
+							<button class="btn btn--ghost" type="button" data-play-family>
+								Play Word Family
+							</button>
+						</div>
+
+						<p class="demo__hint">
+							Tip: Say the ending sound <strong>-at</strong> and swap the first sound:
+							<strong>c</strong>at, <strong>b</strong>at, <strong>h</strong>at, <strong>m</strong>at!
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- POSTERS / PROGRAMS (from provided images) -->
+		<section class="section section--tint" id="programs" aria-label="Programs">
+			<div class="container">
+				<div class="section__head reveal">
+					<h2>Fun with Phonics (Ages 3–8)</h2>
+					<p>
+						Our foundation program focuses on <strong>sounds</strong>, <strong>word blending</strong>,
+						<strong>worksheets</strong>, and <strong>fun activities</strong>—so kids learn to read & speak
+						confidently.
+					</p>
+				</div>
+
+				<div class="poster-grid">
+					<!-- Poster 1 -->
+					<article class="poster reveal">
+						<button class="poster__imgBtn" type="button" data-lightbox="assets/phonics-poster-1.png"
+							aria-label="Open phonics poster 1">
+							<img class="poster__img" src="assets/phonics-poster-1.png"
+								alt="Fun with phonics poster (ages 3+, reading & speaking confidence)" loading="lazy" />
+						</button>
+						<div class="poster__body">
+							<h3>What we offer</h3>
+							<ul class="checklist">
+								<li>Sounds learning</li>
+								<li>Word blending & reading</li>
+								<li>Fun activities & games</li>
+								<li>Worksheets & practice</li>
+							</ul>
+							<div class="poster__cta">
+								<a class="btn btn--small" href="tel:9311974596">Call: 9311974596</a>
+								<a class="btn btn--small btn--whatsapp" href="https://wa.me/9311974596" target="_blank"
+									rel="noreferrer">WhatsApp</a>
+							</div>
+						</div>
+					</article>
+
+					<!-- Poster 2 -->
+					<article class="poster reveal">
+						<button class="poster__imgBtn" type="button" data-lightbox="assets/phonics-poster-2.png"
+							aria-label="Open phonics poster 2">
+							<img class="poster__img" src="assets/phonics-poster-2.png"
+								alt="Sounds learning poster (age 3–8, blending, pronunciation, confidence, strong English foundation)"
+								loading="lazy" />
+						</button>
+						<div class="poster__body">
+							<h3>Benefits</h3>
+							<ul class="checklist">
+								<li>Improve reading skills</li>
+								<li>Better pronunciation</li>
+								<li>Boost confidence</li>
+								<li>Strong English foundation</li>
+							</ul>
+							<p class="muted poster__note">
+								Mode: <strong>Offline classes</strong> • Location: <strong>Noida</strong>
+							</p>
+						</div>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<!-- GALLERY -->
+		<section class="section section--tint" id="gallery" aria-label="Gallery and activities">
+			<div class="container">
+				<div class="section__head reveal">
+					<h2>Gallery & activities</h2>
+					<p>Posters, worksheets, and class moments (tap to zoom).</p>
+				</div>
+
+				<div class="gallery">
+					<figure class="gallery__item reveal">
+						<button class="gallery__btn" type="button" data-lightbox="assets/phonics-poster-1.png"
+							aria-label="Open poster image 1">
+							<img src="assets/phonics-poster-1.png" alt="Fun with phonics poster" loading="lazy" />
+						</button>
+						<figcaption>Fun with Phonics</figcaption>
+					</figure>
+					<figure class="gallery__item reveal">
+						<button class="gallery__btn" type="button" data-lightbox="assets/phonics-poster-2.png"
+							aria-label="Open poster image 2">
+							<img src="assets/phonics-poster-2.png" alt="Sounds learning poster" loading="lazy" />
+						</button>
+						<figcaption>Sounds Learning</figcaption>
+					</figure>
+					<figure class="gallery__item reveal">
+						<div class="ph ph--alt2" role="img" aria-label="Worksheet practice">
+							<span aria-hidden="true">📝</span>
+						</div>
+						<figcaption>Worksheet practice</figcaption>
+					</figure>
+					<figure class="gallery__item reveal">
+						<div class="ph" role="img" aria-label="Rhyming game activity">
+							<span aria-hidden="true">🎲</span>
+						</div>
+						<figcaption>Rhyming games</figcaption>
+					</figure>
+					<figure class="gallery__item reveal">
+						<div class="ph ph--alt2" role="img" aria-label="Alphabet puzzle activity">
+							<span aria-hidden="true">🧠</span>
+						</div>
+						<figcaption>Alphabet puzzles</figcaption>
+					</figure>
+					<figure class="gallery__item reveal">
+						<div class="ph ph--alt" role="img" aria-label="Kids celebrating progress">
+							<span aria-hidden="true">🏆</span>
+						</div>
+						<figcaption>Progress & rewards</figcaption>
+					</figure>
+				</div>
+			</div>
+		</section>
+
+		<!-- Lightbox (JS shows/hides) -->
+		<div class="lightbox" hidden data-lightbox-root aria-label="Image preview" role="dialog" aria-modal="true">
+			<button class="lightbox__backdrop" type="button" data-lightbox-close aria-label="Close preview"></button>
+			<div class="lightbox__panel" role="document">
+				<button class="lightbox__close" type="button" data-lightbox-close aria-label="Close">×</button>
+				<img class="lightbox__img" alt="" data-lightbox-img />
+			</div>
+		</div>
+
+		<!-- TESTIMONIALS -->
+		<section class="section" id="testimonials" aria-label="Testimonials">
+			<div class="container">
+				<div class="section__head reveal">
+					<h2>Parents love the progress</h2>
+					<p>Real feedback (sample content — replace with your own).</p>
+				</div>
+
+				<div class="carousel reveal" data-carousel>
+					<div class="carousel__track" data-carousel-track>
+						<!-- Each slide is a card -->
+						<article class="tcard carousel__slide">
+							<p class="tcard__text">
+								“My child started blending sounds confidently within weeks. The class feels fun,
+								not stressful.”
+							</p>
+							<div class="tcard__meta">
+								<span class="avatar" aria-hidden="true">A</span>
+								<div>
+									<strong>Ananya’s Mom</strong>
+									<small>Phonics + rhymes</small>
+								</div>
+							</div>
+						</article>
+						<article class="tcard carousel__slide">
+							<p class="tcard__text">
+								“The small batch attention made a huge difference. Worksheets are cute and easy
+								to follow at home too.”
+							</p>
+							<div class="tcard__meta">
+								<span class="avatar" aria-hidden="true">R</span>
+								<div>
+									<strong>Rohan’s Dad</strong>
+									<small>Reading readiness</small>
+								</div>
+							</div>
+						</article>
+						<article class="tcard carousel__slide">
+							<p class="tcard__text">
+								“The rhyming games are a hit. Now my kid makes rhymes in the car—learning feels
+								natural.”
+							</p>
+							<div class="tcard__meta">
+								<span class="avatar" aria-hidden="true">S</span>
+								<div>
+									<strong>Siya’s Mom</strong>
+									<small>Confidence boost</small>
+								</div>
+							</div>
+						</article>
+					</div>
+
+					<div class="carousel__controls" aria-label="Carousel controls">
+						<button class="icon-btn" type="button" data-carousel-prev aria-label="Previous">
+							‹
+						</button>
+						<div class="dots" data-carousel-dots aria-label="Slide dots"></div>
+						<button class="icon-btn" type="button" data-carousel-next aria-label="Next">›</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- CONTACT -->
+		<section class="section section--tint" id="contact" aria-label="Contact">
+			<div class="container">
+				<div class="section__head reveal">
+					<h2>Contact & enroll</h2>
+					<p>Send a message and we’ll help you choose the right batch.</p>
+				</div>
+
+				<div class="contact">
+					<form class="form card reveal" data-contact-form>
+						<!-- Simple, parent-friendly form (client-side only) -->
+						<div class="form__row">
+							<label>
+								<span>Name</span>
+								<input name="name" type="text" placeholder="Parent name" required />
+							</label>
+							<label>
+								<span>Phone</span>
+								<input name="phone" type="tel" placeholder="10-digit number" required />
+							</label>
+						</div>
+						<label>
+							<span>Message</span>
+							<textarea name="message" rows="4" placeholder="Tell us your child’s age & reading level..."
+								required></textarea>
+						</label>
+
+						<div class="form__actions">
+							<button class="btn" type="submit">Send Message</button>
+							<a class="btn btn--whatsapp" data-whatsapp href="#" target="_blank" rel="noreferrer">
+								WhatsApp Us
+							</a>
+						</div>
+
+						<p class="form__note muted">
+							Note: This is a demo form (no backend). WhatsApp button opens a pre-filled message.
+						</p>
+					</form>
+
+					<div class="map card reveal" role="img" aria-label="Location placeholder map">
+						<div class="map__top">
+							<strong>Our Location</strong>
+							<span class="muted">Green Shapire Casa, Noida -63 • Founder: Monika Gupta</span>
+						</div>
+						<div class="map__grid" aria-hidden="true">
+							<iframe
+								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7004.704716301908!2d77.42013014563213!3d28.61919982072571!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cee4abb9de49b%3A0x287a032bd7ff51f1!2sGaur%20City%202%2C%20Ghaziabad%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1774445662918!5m2!1sen!2sin"
+								width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+								referrerpolicy="no-referrer-when-downgrade"></iframe>
+						</div>
+						<div class="map__pin" aria-hidden="true">📍</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<!-- FOOTER -->
+	<footer class="footer" aria-label="Footer">
+		<div class="container footer__grid">
+			<div>
+				<div class="footer__brand">
+					<span class="brand__logo" aria-hidden="true">S</span>
+					<div>
+						<strong>S-M-A-R-T Start Readers</strong>
+						<div class="muted">Smart Start: Where sounds turn into stories</div>
+					</div>
+				</div>
+				<p class="muted footer__small">
+					Bright learning for kids. Professional coaching parents can rely on.
+				</p>
+				<p class="muted footer__small"><strong>Founder & Lead Tutor:</strong> Monika Gupta</p>
+			</div>
+
+			<div class="footer__links">
+				<strong>Explore</strong>
+				<a href="#about">About</a>
+				<a href="#features">Features</a>
+				<a href="#demo">Demo</a>
+				<a href="#contact">Contact</a>
+			</div>
+
+			<div class="footer__social">
+				<strong>Social</strong>
+				<!-- Simple inline icons (no external libraries needed) -->
+				<div class="social">
+					<a class="social__icon" href="#" aria-label="Instagram (placeholder)" title="Instagram">
+						<span aria-hidden="true">⌁</span>
+					</a>
+					<a class="social__icon" href="#" aria-label="Facebook (placeholder)" title="Facebook">
+						<span aria-hidden="true">f</span>
+					</a>
+					<a class="social__icon" href="#" aria-label="YouTube (placeholder)" title="YouTube">
+						<span aria-hidden="true">▶</span>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="container footer__bottom">
+			<small>© <span data-year></span> S-M-A-R-T Start Readers. All rights reserved.</small>
+			<a class="back-top" href="#top">Back to top ↑</a>
+		</div>
+	</footer>
+
+	<script src="script.js" defer></script>
+</body>
+
+</html>
